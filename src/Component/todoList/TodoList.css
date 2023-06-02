@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#todo-container {
+    width: 640px;
+    height: 100%;
+    border: 1px solid black;
+    padding: 0 40px;
+}
+
+
+.title-newtask {
+    text-align: center;
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+#todo-container .task-input,
+#todo-container #taskDescription-input,
+#todo-container .task-info,
+#todo-container .task-button {
+    width: 100%;
+}
+
+.description {
+    width: 100%;
+}
+
+.description textarea {
+    border: 1.5px solid black;
+}
+
+#todo-container .task-info {
+    margin: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.task-info .task-due-date,
+.task-info .task-priority {
+    width: 100%;
+}
+
+.task-due-date input,
+.task-priority .task-options {
+    width: 100%;
+    height: 30px;
+    border: 1.5px solid black;
+    padding: 4px 8px;
+}
+
+.task-input {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+}
+
+.item-container{
+    border: 1px solid black;
+    padding: 0 20px ;
+}
+
+#todo-container .task-button {
+    margin: 25px 0;
+    padding: 10px;
+    background-color: rgb(63, 148, 9);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+#todo-container .task-button:hover {
+    background-color: rgb(93, 195, 30);
+}
+
+/*  */
+
+.bulk-action {
+  width: 100%;
+  height: 80px;
+  margin-top: 80px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #bbb;
+}
+.task-item .task-item-title span{
+  margin-left: 12px;
+}
+
+
+.done-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background-color: rgb(38, 162, 190);
+  font-weight: 600;
+  font-size: .7rem;
+  color: white;
+  margin: 0 20px;
+}
+
+.done-btn:hover {
+  background-color: rgb(23, 136, 161);
+  cursor: pointer;
+}
+
+.remove-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background-color: rgb(218, 81, 54);
+  font-weight: 600;
+  font-size: .7rem;
+  color: white;
+}
+
+.bulk-action .remove-btn:hover {
+  background-color: rgb(208, 47, 15);
+  cursor: pointer;
+}
