@@ -60,10 +60,6 @@
     border-radius: 2px;
 }
 
-.item-container{
-    border: 1px solid black;
-    padding: 0 20px ;
-}
 
 #todo-container .task-button {
     margin: 25px 0;

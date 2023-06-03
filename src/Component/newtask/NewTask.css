@@ -18,7 +18,6 @@
 }
 
 .task-input {
-  margin: 20px 0;
   padding: 10px;
   border: 1px solid #bbb;
   border-radius: 2px;
@@ -36,4 +35,16 @@
 
 #task-container .task-button:hover {
   background-color: rgb(93, 195, 30);
+}
+
+#task-container .error-log {
+  color: red;
+  font-size: .7rem;
+  font-weight: 600;
+  visibility: hidden;
+  margin-bottom: 20px;
+}
+
+#task-container .error-log.active {
+  visibility: visible;
 }
