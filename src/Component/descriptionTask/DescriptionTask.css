@@ -7,7 +7,7 @@
 #des-container {
   width: 440px;
   height: 100%;
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 0 40px;
 }
 
@@ -39,10 +39,6 @@
   width: 100%;
 }
 
-.description textarea {
-  border: 1.5px solid black;
-}
-
 #task-container .task-info {
   margin: 25px;
   display: flex;
@@ -59,8 +55,15 @@
 .task-priority .task-options {
   width: 100%;
   height: 30px;
-  border: 1.5px solid black;
   padding: 4px 8px;
+  outline: none;
+  background-color: #f68686;
+  color: white;
+  border-radius: 4px;
+}
+
+.task-due-date input{
+  border:1px solid #f68686;
 }
 
 .task-input {

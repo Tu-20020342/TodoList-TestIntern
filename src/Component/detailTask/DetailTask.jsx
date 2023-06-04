@@ -3,10 +3,14 @@ import './DetailTask.css';
 import DescriptionTask from '../descriptionTask/DescriptionTask';
 import TaskItems from '../taskItems/TaskItems';
 
-const DetailTask = ({ task, handleUpdateTask, handleRemoveTask }) => {
+const DetailTask = (
+  {
+    task,
+    handleUpdateTask,
+    handleRemoveTask,
+    handleCheckboxChange }) => {
   const [taskDetail, setTaskDetail] = useState(task);
   const [openDetail, setOpenDetail] = useState(false)
-
 
   const handleChangeInput = (e) => {
     setTaskDetail({
@@ -22,6 +26,7 @@ const DetailTask = ({ task, handleUpdateTask, handleRemoveTask }) => {
         setOpenDetail={setOpenDetail}
         openDetail={openDetail}
         handleRemoveTask={handleRemoveTask}
+        handleCheckboxChange={handleCheckboxChange}
       />
       {
         openDetail && (

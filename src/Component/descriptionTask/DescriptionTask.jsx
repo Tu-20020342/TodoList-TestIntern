@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useEffect } from 'react'
 import './DescriptionTask.css'
 
 const DescriptionTask = ({ task, setTask }) => {
@@ -26,10 +25,6 @@ const DescriptionTask = ({ task, setTask }) => {
   const handlePriorityChange = (event) => {
     setTask({ ...task, taskPriority: event.target.value });
   }
-
-  // useEffect(() => {
-  //   console.log(task, 'jgjhgjh ');
-  // }, [])
 
   return (
     <div className='des-container'>
@@ -59,11 +54,18 @@ const DescriptionTask = ({ task, setTask }) => {
             <p className='input-title'>Priority</p>
             <select
               className='task-options'
+              value={task.taskPriority}
               onChange={handlePriorityChange}
             >
-              <option value="High">High</option>
-              <option value="Normal">Normal</option>
-              <option value="Low">Low</option>
+              <option
+                value="High"
+              >High</option>
+              <option
+                value="Normal"
+              >Normal</option>
+              <option
+                value="Low"
+              >Low</option>
             </select>
           </div>
         </div>

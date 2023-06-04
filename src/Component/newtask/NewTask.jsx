@@ -25,12 +25,16 @@ const NewTask = (props) => {
       const errorLog = document.querySelector('.error-log')
       errorLog.classList.add('active')
     } else {
+      const errorLog = document.querySelector('.error-log')
+      errorLog.classList.remove('active')
+
       const newTask = {
         taskTitle: task.taskTitle,
         taskDescription: task.taskDescription,
         taskDuedate: task.taskDuedate,
         taskPriority: task.taskPriority,
         taskID: uuidv4(),
+        checked: false,
       };
       props.setTaskList((prevTaskList) => [...prevTaskList, newTask]);
       setTask({
@@ -40,7 +44,6 @@ const NewTask = (props) => {
         taskPriority: 'Low',
       });
     }
-    // console.log(task);
   }
 
   return (

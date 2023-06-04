@@ -1,6 +1,19 @@
-#pages-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#pages-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
+@media only screen and (max-width: 820px) {
+  #pages-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-device-width: 821) and (max-device-width: 1280px) {
+  .pages-container {
+    flex-direction: column;
+    width: 100%;
+  }
+}

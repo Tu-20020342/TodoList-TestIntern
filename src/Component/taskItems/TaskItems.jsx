@@ -6,27 +6,32 @@ const TaskItems = (props) => {
     props.setOpenDetail(!props.openDetail)
   }
 
-  return (
+  const handleChecked = (e) => {
+    props.handleCheckboxChange(e.target.checked, props.task.taskID);
+  }
 
+  return (
     <div id='task-item-container'>
       <div className="task-item">
         <div>
           <div className="task-item-title">
             <input
               type="checkbox"
+              checked={props.task?.checked}
+              onChange={handleChecked}
             />
             <span>{props.task.taskTitle}</span>
           </div>
         </div>
         <div>
           <button
-            className='detail-btn'
+            className='detail-btn btn-task-item'
             onClick={handleOpenDetail}
-            >Detail</button>
+          >Detail</button>
           <button
-            className='remove-btn'
+            className='remove-btn btn-task-item'
             onClick={() => props.handleRemoveTask(props.task.taskID)}
-            >Remove</button>
+          >Remove</button>
         </div>
       </div>
 
